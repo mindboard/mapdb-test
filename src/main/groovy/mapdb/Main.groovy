@@ -15,12 +15,12 @@ class Main {
         def map = db.hashMap("map").createOrOpen()
 
         if( firstTime ){
-            // 初回時 -> データを作成
+            // create db and contents.
             map.put('key1','hello')
             map.put('key2','hello world')
         }
         else {
-            // 二回目以後 -> 内容を確認
+            // output contents.
             println map.get('key1')
             println map.get('key2')
         }
